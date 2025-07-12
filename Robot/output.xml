@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.10.12 on linux)" generated="2025-04-02T09:55:55.181538" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot" source="/home/sgupta61/Desktop/Frameworks/Robot">
+<suite id="s1-s1" name="Robot framework" source="/home/sgupta61/Desktop/Frameworks/Robot/Robot_framework">
+<suite id="s1-s1-s1" name="Tests" source="/home/sgupta61/Desktop/Frameworks/Robot/Robot_framework/tests">
+<suite id="s1-s1-s1-s1" name="Devesh Assessment" source="/home/sgupta61/Desktop/Frameworks/Robot/Robot_framework/tests/Devesh_Assessment.robot">
+<kw name="Precondition" owner="open" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-02T09:55:55.405565" level="INFO">Opening browser 'Chrome' to base url 'https://www.flipkart.com/'.</msg>
+<msg time="2025-04-02T09:55:58.612085" level="WARN">The chromedriver version (134.0.6998.165) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (133.0.6943.98); currently, chromedriver 133.0.6943.141 is recommended for chrome 133.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-04-02T09:56:00.540795" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-04-02T09:56:00.541169" level="FAIL">SessionNotCreatedException: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x60a824a5d66a &lt;unknown&gt;
+#1 0x60a82452ed90 &lt;unknown&gt;
+#2 0x60a824565887 &lt;unknown&gt;
+#3 0x60a824563c98 &lt;unknown&gt;
+#4 0x60a8245b3b30 &lt;unknown&gt;
+#5 0x60a8245b30c6 &lt;unknown&gt;
+#6 0x60a8245a5293 &lt;unknown&gt;
+#7 0x60a8245716ba &lt;unknown&gt;
+#8 0x60a824572821 &lt;unknown&gt;
+#9 0x60a824a2450f &lt;unknown&gt;
+#10 0x60a824a2859d &lt;unknown&gt;
+#11 0x60a824a0b602 &lt;unknown&gt;
+#12 0x60a824a28d0e &lt;unknown&gt;
+#13 0x60a8249f191e &lt;unknown&gt;
+#14 0x60a824a4b928 &lt;unknown&gt;
+#15 0x60a824a4bb33 &lt;unknown&gt;
+#16 0x60a824a5c2dc &lt;unknown&gt;
+#17 0x75b4175aaac3 &lt;unknown&gt;
+</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-04-02T09:55:55.405348" elapsed="5.146223">SessionNotCreatedException: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x60a824a5d66a &lt;unknown&gt;
+#1 0x60a82452ed90 &lt;unknown&gt;
+#2 0x60a824565887 &lt;unknown&gt;
+#3 0x60a824563c98 &lt;unknown&gt;
+#4 0x60a8245b3b30 &lt;unknown&gt;
+#5 0x60a8245b30c6 &lt;unknown&gt;
+#6 0x60a8245a5293 &lt;unknown&gt;
+#7 0x60a8245716ba &lt;unknown&gt;
+#8 0x60a824572821 &lt;unknown&gt;
+#9 0x60a824a2450f &lt;unknown&gt;
+#10 0x60a824a2859d &lt;unknown&gt;
+#11 0x60a824a0b602 &lt;unknown&gt;
+#12 0x60a824a28d0e &lt;unknown&gt;
+#13 0x60a8249f191e &lt;unknown&gt;
+#14 0x60a824a4b928 &lt;unknown&gt;
+#15 0x60a824a4bb33 &lt;unknown&gt;
+#16 0x60a824a5c2dc &lt;unknown&gt;
+#17 0x75b4175aaac3 &lt;unknown&gt;
+</status>
+</kw>
+<arg>${fetchLink}</arg>
+<status status="FAIL" start="2025-04-02T09:55:55.404679" elapsed="5.147841">SessionNotCreatedException: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x60a824a5d66a &lt;unknown&gt;
+#1 0x60a82452ed90 &lt;unknown&gt;
+#2 0x60a824565887 &lt;unknown&gt;
+#3 0x60a824563c98 &lt;unknown&gt;
+#4 0x60a8245b3b30 &lt;unknown&gt;
+#5 0x60a8245b30c6 &lt;unknown&gt;
+#6 0x60a8245a5293 &lt;unknown&gt;
+#7 0x60a8245716ba &lt;unknown&gt;
+#8 0x60a824572821 &lt;unknown&gt;
+#9 0x60a824a2450f &lt;unknown&gt;
+#10 0x60a824a2859d &lt;unknown&gt;
+#11 0x60a824a0b602 &lt;unknown&gt;
+#12 0x60a824a28d0e &lt;unknown&gt;
+#13 0x60a8249f191e &lt;unknown&gt;
+#14 0x60a824a4b928 &lt;unknown&gt;
+#15 0x60a824a4bb33 &lt;unknown&gt;
+#16 0x60a824a5c2dc &lt;unknown&gt;
+#17 0x75b4175aaac3 &lt;unknown&gt;
+</status>
+</kw>
+<test id="s1-s1-s1-s1-t1" name="TC_6" line="9">
+<status status="FAIL" start="2025-04-02T09:56:00.553299" elapsed="0.001273">Parent suite setup failed:
+SessionNotCreatedException: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x60a824a5d66a &lt;unknown&gt;
+#1 0x60a82452ed90 &lt;unknown&gt;
+#2 0x60a824565887 &lt;unknown&gt;
+#3 0x60a824563c98 &lt;unknown&gt;
+#4 0x60a8245b3b30 &lt;unknown&gt;
+#5 0x60a8245b30c6 &lt;unknown&gt;
+#6 0x60a8245a5293 &lt;unknown&gt;
+#7 0x60a8245716ba &lt;unknown&gt;
+#8 0x60a824572821 &lt;unknown&gt;
+#9 0x60a824a2450f &lt;unknown&gt;
+#10 0x60a824a2859d &lt;unknown&gt;
+#11 0x60a824a0b602 &lt;unknown&gt;
+#12 0x60a824a28d0e &lt;unknown&gt;
+#13 0x60a8249f191e &lt;unknown&gt;
+#14 0x60a824a4b928 &lt;unknown&gt;
+#15 0x60a824a4bb33 &lt;unknown&gt;
+#16 0x60a824a5c2dc &lt;unknown&gt;
+#17 0x75b4175aaac3 &lt;unknown&gt;
+</status>
+</test>
+<kw name="Postcondition" owner="open" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-02T09:56:00.556340" elapsed="0.016741"/>
+</kw>
+<status status="PASS" start="2025-04-02T09:56:00.555841" elapsed="0.017328"/>
+</kw>
+<status status="FAIL" start="2025-04-02T09:55:55.206953" elapsed="5.366244">Suite setup failed:
+SessionNotCreatedException: Message: session not created
+from unknown error: no chrome binary at /usr/bin/google-chrome
+Stacktrace:
+#0 0x60a824a5d66a &lt;unknown&gt;
+#1 0x60a82452ed90 &lt;unknown&gt;
+#2 0x60a824565887 &lt;unknown&gt;
+#3 0x60a824563c98 &lt;unknown&gt;
+#4 0x60a8245b3b30 &lt;unknown&gt;
+#5 0x60a8245b30c6 &lt;unknown&gt;
+#6 0x60a8245a5293 &lt;unknown&gt;
+#7 0x60a8245716ba &lt;unknown&gt;
+#8 0x60a824572821 &lt;unknown&gt;
+#9 0x60a824a2450f &lt;unknown&gt;
+#10 0x60a824a2859d &lt;unknown&gt;
+#11 0x60a824a0b602 &lt;unknown&gt;
+#12 0x60a824a28d0e &lt;unknown&gt;
+#13 0x60a8249f191e &lt;unknown&gt;
+#14 0x60a824a4b928 &lt;unknown&gt;
+#15 0x60a824a4bb33 &lt;unknown&gt;
+#16 0x60a824a5c2dc &lt;unknown&gt;
+#17 0x75b4175aaac3 &lt;unknown&gt;
+</status>
+</suite>
+<status status="FAIL" start="2025-04-02T09:55:55.205940" elapsed="5.367709"/>
+</suite>
+<status status="FAIL" start="2025-04-02T09:55:55.204979" elapsed="5.368927"/>
+</suite>
+<status status="FAIL" start="2025-04-02T09:55:55.182875" elapsed="5.391262"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robot">Robot</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Robot framework">Robot.Robot framework</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Tests">Robot.Robot framework.Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="Devesh Assessment">Robot.Robot framework.Tests.Devesh Assessment</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-02T09:55:58.612085" level="WARN">The chromedriver version (134.0.6998.165) detected in PATH at /usr/bin/chromedriver might not be compatible with the detected chrome version (133.0.6943.98); currently, chromedriver 133.0.6943.141 is recommended for chrome 133.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
