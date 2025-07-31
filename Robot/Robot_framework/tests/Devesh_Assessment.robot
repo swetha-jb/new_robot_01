@@ -1,11 +1,29 @@
-*** Settings ***
+# *** Settings ***
+# Library    SeleniumLibrary
+# Resource     ../variables/variables.robot
+# Resource     ../keywords/open.robot
+# Resource    ../keywords/fetch_link_keywords.robot
+# Suite Setup    Precondition    ${fetchLink}
+# Suite Teardown    Postcondition
+# *** Test Cases ***
+# TC_6
+#     Fetch_All_Link
+
 Library    SeleniumLibrary
-Resource     ../variables/variables.robot
-Resource     ../keywords/open.robot
-Resource    ../keywords/fetch_link_keywords.robot
-Suite Setup    Precondition    ${fetchLink}
-Suite Teardown    Postcondition
+
+*** Variables ***
+${URL}    https://example.com
+
 *** Test Cases ***
-TC_6
-    Fetch_All_Link
-    
+Open Browser to Example
+    Open Browser    ${URL}    chrome
+    Title Should Be    Example Domain
+    [Teardown]    Close Browser
+
+Verify Example Content
+    [Setup]    Open Browser to Example
+    Element Should Be Visible    xpath://h1[contains(text(), 'Example Domain')]
+    [Teardown]    Close Browser
+
+Verify Example Content1    
+    Log To Console    Example Domain
