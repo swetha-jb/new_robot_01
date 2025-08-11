@@ -3,12 +3,13 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${CHROME OPTIONS}    add_argument("--headless");add_argument("--no-sandbox");add_argument("--disable-dev-shm-usage");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222")
-${CHROMEDRIVER_PATH}    /usr/local/bin/chromedriver
+${CHROMEDRIVER PATH}    /usr/local/bin/chromedriver
 
 *** Keywords ***
 Precondition
-    [Arguments]     ${url}
-    Open Browser    ${url}    chrome    options=${CHROME OPTIONS}    executable_path=${CHROMEDRIVER_PATH}
+    [Arguments]    ${url}
+    ${service}=    Evaluate    sys.modules['selenium.webdriver.chrome.service'].Service(${CHROMEDRIVER PATH})    sys, selenium.webdriver.chrome.service
+    Open Browser    ${url}    chrome    options=${CHROME OPTIONS}    service=${service}
 
 Postcondition
     Close Browser
