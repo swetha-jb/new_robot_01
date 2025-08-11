@@ -1,22 +1,13 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    Collections
-Library    OperatingSystem
-Library    Process
-Library    BuiltIn
-Library    SeleniumLibrary
+Library     SeleniumLibrary
+
+*** Variables ***
+${CHROME OPTIONS}    add_argument("--headless");add_argument("--no-sandbox");add_argument("--disable-dev-shm-usage");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222")
 
 *** Keywords ***
 Precondition
-    [Arguments]    ${url}
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${options}    add_argument    --headless
-    Call Method    ${options}    add_argument    --no-sandbox
-    Call Method    ${options}    add_argument    --disable-dev-shm-usage
-    Call Method    ${options}    add_argument    --disable-gpu
-    # Removed --remote-debugging-port because it causes errors; add only if you really need it.
-    Create WebDriver    Chrome    options=${options}
-    Go To    ${url}
+    [Arguments]     ${url}
+    Open Browser     ${url}   chrome    options=${CHROME OPTIONS}
 
 Postcondition
     Close Browser
