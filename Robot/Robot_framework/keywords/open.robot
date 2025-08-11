@@ -8,7 +8,7 @@ ${CHROMEDRIVER PATH}    /usr/local/bin/chromedriver
 *** Keywords ***
 Precondition
     [Arguments]    ${url}
-    ${service}=    Evaluate    sys.modules['selenium.webdriver.chrome.service'].Service(${CHROMEDRIVER PATH})    sys, selenium.webdriver.chrome.service
+ ${service}=    Evaluate    sys.modules['selenium.webdriver.chrome.service'].Service('/usr/local/bin/chromedriver')    sys, selenium.webdriver.chrome.service
     Open Browser    ${url}    chrome    options=${CHROME OPTIONS}    service=${service}
 
 Postcondition
