@@ -2,16 +2,14 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${CHROME OPTIONS}    add_argument("--headless");add_argument("--no-sandbox");add_argument("--dis
-Terminal
-able-dev-shm-usage");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222")
-${CHROMEDRIVER PATH}    /usr/local/bin/chromedriver
+${CHROMIUM OPTIONS}    add_argument("--headless");add_argument("--no-sandbox");add_argument("--disable-dev-shm-usage");add_argument("--disable-gpu");add_argument("--remote-debugging-port=9222")
+${CHROMEDRIVER PATH}    /usr/local/bin/chromedriver   # Chromium uses the same chromedriver
 
 *** Keywords ***
 Precondition
     [Arguments]    ${url}
- ${service}=    Evaluate    sys.modules['selenium.webdriver.chrome.service'].Service('/usr/local/bin/chromedriver')    sys, selenium.webdriver.chrome.service
-    Open Browser    ${url}    chrome    options=${CHROME OPTIONS}    service=${service}
+    ${service}=    Evaluate    selenium.webdriver.chrome.service.Service('${CHROMEDRIVER PATH}')    selenium.webdriver.chrome.service
+    Open Browser    ${url}    chromium    options=${CHROMIUM OPTIONS}    service=${service}
 
 Postcondition
     Close Browser
