@@ -10,12 +10,12 @@ ${CHROMIUM OPTIONS}    --headless;--no-sandbox;--disable-dev-shm-usage;--disable
 Precondition
     [Arguments]    ${url}
     ${options}=    Evaluate    selenium.webdriver.ChromeOptions()    selenium.webdriver
+    Call Method    ${options}    binary_location    ${CHROMIUM BINARY}
     FOR    ${arg}    IN    @{CHROMIUM OPTIONS.split(";")}
         Call Method    ${options}    add_argument    ${arg}
     END
     ${service}=    Evaluate    selenium.webdriver.chrome.service.Service('${CHROMEDRIVER PATH}')    selenium.webdriver.chrome.service
-    Open Browser    ${url}    chromium    options=${options}    service=${service}
-
+    Open Browser    ${url}    chrome    options=${options}    service=${service}
 
 Postcondition
     Close Browser
