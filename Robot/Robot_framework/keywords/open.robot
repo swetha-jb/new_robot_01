@@ -14,7 +14,8 @@ Precondition
         Call Method    ${options}    add_argument    ${arg}
     END
     ${service}=    Evaluate    selenium.webdriver.chrome.service.Service('${CHROMEDRIVER PATH}')    selenium.webdriver.chrome.service
-    Open Browser    ${url}    chromium    options=${options}    service=${service}    executable_path=${CHROMIUM BINARY}
+    Open Browser    ${url}    chromium    options=${options}    service=${service}
+
 
 Postcondition
     Close Browser
