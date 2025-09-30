@@ -8,8 +8,7 @@ ${CHROMEDRIVER PATH}    /usr/local/bin/chromedriver   # Chromium uses the same c
 
 *** Keywords ***
 Precondition
-    # [Arguments]    ${url}
-    # ${service}=    Evaluate    selenium.webdriver.chrome.service.Service('${CHROMEDRIVER PATH}')    selenium.webdriver.chrome.service
+    [Arguments]    ${urlw}
     Open Browser    ${url}    chromium    options=${CHROMIUM OPTIONS}    service=${service}
 
 Postcondition
