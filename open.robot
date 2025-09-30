@@ -13,4 +13,4 @@ Precondition
     Open Browser    ${url}    chromium    options=${CHROMIUM OPTIONS}    service=${service}
 
 Postcondition
-    Close Browser
+    Close Browse
